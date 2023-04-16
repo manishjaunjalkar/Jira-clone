@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jira-Clone</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <button id="click-button" onclick="showmodal()">Open Modal</button>
+    <div class="container">
+        <div  class="column">
+            <h3>Not Started</h3>
+            <ul id="notstarted" class="tasklist"></ul>
+        </div>
+        <div  class="column">
+            <h3>In-Progress</h3>
+            <ul id="in-progress" class="tasklist"></ul>
+        </div>
+        <div  class="column">
+            <h3>Completed</h3>
+            <ul id="completed" class="tasklist"></ul>
+        </div>
+    </div>
+    <div class="modal-container" id="modal-id">
+        <div id="modal-content">
+            <form id="form">
+                <nav>
+                    <label for="task">Task Name</label>
+                    <input type="text" id="task" name="task">
+                </nav>
+                <nav>
+                    <label for="priority">Priority</label>
+                    <select name="priority" id="priority">
+                        <option value="low">Low</option>
+                        <option value="medium">Medium</option>
+                        <option value="high">High</option>
+                    </select>
+                </nav>
+                <nav>
+                    <label for="date">Task Name</label>
+                    <input type="date" id="date" name="date">
+                </nav>
+                <nav>
+                    <label for="status">Status</label>
+                    <select name="status" id="status">
+                        <option value="notstarted">Not Started</option>
+                        <option value="in-progress">In-Progress</option>
+                        <option value="completed">Completed</option>
+                    </select>
+                </nav>
+                <nav>
+                    <button type="submit" id="add-task" >Add</button>
+                </nav>
+            </form>
+
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
